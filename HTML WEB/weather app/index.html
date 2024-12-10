@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Weather at a Glance</title>
+    <style> 
+    body{
+        background-color: bisque;
+        font-size: 40px;
+        background-size: 100vh;
+        color: rgb(44, 37, 37);
+    }
+        h1 {
+            color: black;
+            font-size: 130px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        button{
+            box-shadow: 5px 5px 5px;
+            font-size: 25px;
+            height: 35px;
+            width: 100px;
+            background-color: green;
+            border-radius: 20%;
+        }
+        .state{
+            border-radius: 20%;
+            box-shadow: 5px 5px 5px;
+            height: 29px;
+            width: 350px;
+            font-size: 25px;
+
+        }
+ 
+    </style>
+</head>
+<body><center>
+        <h1>Weather App</h1>
+        <form class="search-form" id="searchForm">
+            <input type="text" placeholder="Enter city name" class="state" id="cityInput" value="Ranchi">
+            <button type="submit" class="search-button">Search</button>
+        </form>
+        <p id="loadingMessage" style="display: none; text-align: center;">Loading...</p>
+        <p id="errorMessage" class="error-message" style="display: none; color: red;"></p>
+        <div id="weatherDetails" class="weather-details" style="display: none;"></div>
+    </div></center>
+    <script>
+        const searchForm = document.getElementById('searchForm');
+        const cityInput = document.getElementById('cityInput');
+        const loadingMessage = document.getElementById('loadingMessage');
+        const errorMessage = document.getElementById('errorMessage');
+        const weatherDetails = document.getElementById('weatherDetails');
+
+        const fetchWeather = async (city) => {
+            try {
+                loadingMessage.style.display = 'block';
+                errorMessage.style.display = 'none';
+                weatherDetails.style.display = 'none';
+
+                const response = await fetch(
+                    `https://api.weatherapi.com/v1/current.json?key=b435d69417494b1f80152414240912&q=${city}&aqi=no`
+                );
+
+                if (!response.ok) {
+                    throw new Error('Failed to fetch weather data');
+                }
+                
+                const data = await response.json();
+                displayWeather(data);
+            } catch (err) {
+                errorMessage.textContent = 'Failed to fetch weather data. Please check the city name.';
+                errorMessage.style.display = 'block';
+            } finally {
+                loadingMessage.style.display = 'none';
+            }
+        };
+
+        const displayWeather = (data) => {
+            const { location, current } = data;
+            weatherDetails.innerHTML = `
+                <h2>Weather in ${location.name}, ${location.country}</h2>
+                <p><strong>Temperature:</strong> ${current.temp_c}°C</p>
+                <p><strong>Condition:</strong> ${current.condition.text}</p>
+                <p><strong>Humidity:</strong> ${data.current.humidity}%</p>
+                <p><strong>Wind speed:</strong> ${data.current.wind_kph}kph</p>
+                <img src="${current.condition.icon}" alt="${current.condition.text}">
+            `;
+            weatherDetails.style.display = 'block';
+        };
+
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const city = cityInput.value.trim();
+            if (city) {
+                fetchWeather(city);
+            }
+        });
+
+        // Initial weather fetch for Ranchi
+        fetchWeather('Ranchi');
+    </script> 
+</body>
+</html

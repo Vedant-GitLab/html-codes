@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solar System</title>
+  <style>
+    body {
+  margin: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.solar-system {
+  position: relative;
+  width: 600px;
+  height: 600px;
+}
+
+.sun {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: yellow;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px yellow, 0 0 50px orange;
+}
+
+.planet {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: orbit infinite linear;
+}
+
+.mercury {
+  background: gray;
+  width: 8px;
+  height: 8px;
+  top: 50%;
+  left: 50%;
+  animation-duration: 4s;
+  transform-origin: -50px;
+}
+
+.venus {
+  background: orange;
+  top: 50%;
+  left: 50%;
+  animation-duration: 6s;
+  transform-origin: -100px;
+}
+
+.earth {
+  background: blue;
+  top: 50%;
+  left: 50%;
+  animation-duration: 8s;
+  transform-origin: -150px;
+}
+
+.mars {
+  background: red;
+  top: 50%;
+  left: 50%;
+  animation-duration: 10s;
+  transform-origin: -200px;
+}
+
+.jupiter {
+  background: brown;
+  width: 30px;
+  height: 30px;
+  top: 50%;
+  left: 50%;
+  animation-duration: 12s;
+  transform-origin: -250px;
+}
+
+.saturn {
+  background: goldenrod;
+  top: 50%;
+  left: 50%;
+  animation-duration: 14s;
+  transform-origin: -300px;
+}
+
+.uranus {
+  background: lightblue;
+  top: 50%;
+  left: 50%;
+  animation-duration: 16s;
+  transform-origin: -350px;
+}
+
+.neptune {
+  background: darkblue;
+  top: 50%;
+  left: 50%;
+  animation-duration: 18s;
+  transform-origin: -400px;
+}
+
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="solar-system">
+    <div class="sun"></div>
+    <div class="planet mercury"></div>
+    <div class="planet venus"></div>
+    <div class="planet earth"></div>
+    <div class="planet mars"></div>
+    <div class="planet jupiter"></div>
+    <div class="planet saturn"></div>
+    <div class="planet uranus"></div>
+    <div class="planet neptune"></div>
+  </div>
+  
+  
+</body>
+</html>

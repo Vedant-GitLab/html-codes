@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let student={
+            name: "Sonu",
+            class: "XII",
+            rollno:244,
+            marks: 100,
+            address:{
+                state:"Haryana",
+                city:"Farrukhnagar"
+            }
+        }
+
+        let car={
+            name: "Audi",
+            model: "VI",
+            year: 2021,
+            feature:{
+                color:["red","yellow","green"],
+                engine:"V0",
+                top_speed:"200"
+            }
+        }
+
+        let hospital={
+            NoOfBeds: 100,
+            NoOfDr: 20,
+            NoOfPatient: 20,
+        }
+        student.name="sanjeet"
+        console.log("There are the values", Object.values(car))
+        console.log("There are the values", Object.keys(car))
+        console.log("Name",student.name)
+        console.log("Address",student.address.city)
+        console.log("Name",student)
+
+        console.log("beds",hospital.NoOfBeds)
+        console.log("dr",hospital.NoOfDr)
+        console.log("patient",hospital.NoOfPatient)
+    </script>
+</body>
+</html>

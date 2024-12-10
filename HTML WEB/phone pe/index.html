@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhonePe Inspired Website</title>
+ <style>
+    /* General Reset */
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #673ab7;
+  color: white;
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #4caf50;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero button {
+  padding: 0.8rem 1.5rem;
+  background-color: #fff;
+  color: #4caf50;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.hero button:hover {
+  background-color: #45a049;
+  color: white;
+}
+
+/* Features Section */
+.features {
+  padding: 2rem 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #f1f1f1;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+ </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">PhonePe</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#insurance">Insurance</a></li>
+        <li><a href="#investments">Investments</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>One App for All Things Money</h1>
+    <p>Pay bills, recharge, send money, invest, and shop with ease!</p>
+    <button id="downloadBtn">Download App</button>
+  </section>
+
+  <section id="features" class="features">
+    <h2>Our Features</h2>
+    <div class="feature-cards">
+      <div class="card">
+        <h3>Fast Payments</h3>
+        <p>Send money securely via UPI, wallet, or cards.</p>
+      </div>
+      <div class="card">
+        <h3>Insurance Options</h3>
+        <p>Health, life, travel, and more at your fingertips.</p>
+      </div>
+      <div class="card">
+        <h3>Invest Smartly</h3>
+        <p>Buy gold or explore investment funds easily.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 PhonePe Inspired Website. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Interactivity for download button
+document.getElementById("downloadBtn").addEventListener("click", () => {
+  alert("Thank you for your interest! The app is coming soon.");
+});
+
+  </script>
+</body>
+</html>

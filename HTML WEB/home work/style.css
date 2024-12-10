@@ -1,0 +1,48 @@
+/* Center the traffic light on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+/* Create the traffic light container */
+.traffic-light {
+    width: 120px;
+    height: 360px;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style each light (red, yellow, green) */
+.light {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #333; /* Initial color is off */
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+/* Specific colors for each light */
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+
+/* Define active state for the lights */
+.active {
+    opacity: 1;
+}

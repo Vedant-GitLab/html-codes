@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luxury Cars</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(135deg, #ff0000 0%, #101bf2 100%);
+      min-height: 100vh;
+      color: #fff;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      width: 100%;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2rem;
+    }
+
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      width: 100%;
+      max-width: 1200px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-title {
+      font-size: 1.8rem;
+      margin: 0 0 10px;
+      color: #333;
+    }
+
+    .card-description {
+      font-size: 1rem;
+      color: #666;
+      margin: 0 0 20px;
+    }
+
+    .card-button {
+      display: inline-block;
+      background: #000;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .card-button:hover {
+      background: #333;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header p {
+        font-size: 1rem;
+      }
+
+      .card img {
+        height: 180px;
+      }
+
+      .card-title {
+        font-size: 1.5rem;
+      }
+
+      .card-description {
+        font-size: 0.9rem;
+      }
+
+      .card-button {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Luxury Cars Showcase!</h1>
+    <p>Explore the beauty and engineering of the world's finest cars.</p>
+    <br>
+    <br>
+  </header>
+  <div class="cards-container">
+    <div class="card">
+      <img src="https://images.pexels.com/photos/19798457/pexels-photo-19798457/free-photo-of-mercedes-benz-g-class-on-street-of-london-england.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="G-Wagon">
+      <div class="card-content">
+        <h2 class="card-title">Mercedes-Benz</h2>
+        <p class="card-description">The Mercedes-Benz G-Class, colloquially known as the G-Wagon, is a luxury SUV originally developed as a military off-roader.</p>
+        <a href="https://www.mercedes-benz.com/en/" class="card-button">About G-Wagon</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.pexels.com/photos/9643708/pexels-photo-9643708.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Porsche 911">
+      <div class="card-content">
+        <h2 class="card-title">Porsche 911</h2>
+        <p class="card-description">The Porsche 911 is a high-performance sports car that has become a symbol of automotive excellence and engineering brilliance.</p>
+        <a href="https://www.porsche.com/middle-east/india/?cs_redirect=1" class="card-button">About Porsche 911</a>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.pexels.com/photos/337909/pexels-photo-337909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Ferrari">
+      <div class="card-content">
+        <h2 class="card-title">Ferrari</h2>
+        <p class="card-description">Ferrari is an iconic Italian brand known for its luxury sports cars, symbolizing speed and sophistication worldwide.</p>
+        <a href="https://www.ferrari.com/en-IN" class="card-button">About Ferrari</a>
+      </div>
+    </div>
+    <div class="card">
+        <img src="https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Audi">
+        <div class="card-content">
+          <h2 class="card-title">Audi</h2>
+          <p class="card-description">Audi AG is a German automotive manufacturer of luxury vehicles headquartered in Ingolstadt, Bavaria, Germany. A subsidiary of the Volkswagen Group, Audi produces vehicles in nine production facilities worldwide.</p>
+          <a href="https://www.audi.in/en/" class="card-button">About Audi</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/225841/pexels-photo-225841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Range Rover">
+        <div class="card-content">
+          <h2 class="card-title">Range Rover</h2>
+          <p class="card-description">The Land Rover Range Rover, generally shortened to Range Rover, is a 4x4 luxury SUV produced by Land Rover, a marque and sub-brand of Jaguar Land Rover. The Range Rover line was launched in 1970 by British Leyland and is now in its fifth generation.</p>
+          <a href="https://retailers.landrover.in/shiva-motocorp?gad_source=1&gclid=CjwKCAiA9bq6BhAKEiwAH6bqoNmYT64gVTOZ6Vw9sAAQs_I7gkOk4DHhkyEF6Wz_Fgf3ZdZwkYR0RRoCRXUQAvD_BwE" class="card-button">About Range Rover</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/951318/pexels-photo-951318.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="BMW">
+        <div class="card-content">
+          <h2 class="card-title">BMW</h2>
+          <p class="card-description">The BMW Group (legally, Bayerische Motoren Werke AG, commonly abbreviated to BMW (German pronunciation: [ˌbeːʔɛmˈveː] ⓘ), sometimes anglicized as Bavarian Motor Works), is a German multinational manufacturer of luxury vehicles and motorcycles headquartered in Munich, Bavaria, Germany. The company was founded in 1916 as a manufacturer of aircraft engines, which it produced from 1917 to 1918 and again from 1933 to 1945 creating engines for aircraft that were used in the Second World War.</p>
+          <a href="https://www.bmw.in/en/index.html" class="card-button">About BMW</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/2882234/pexels-photo-2882234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="JEEP">
+        <div class="card-content">
+          <h2 class="card-title">JEEP</h2>
+          <p class="card-description">Jeep is an American automobile brand, now owned by multi-national corporation Stellantis.[2][3] Jeep has been part of Chrysler since 1987, when Chrysler acquired the Jeep brand, along with other assets, from their previous owner American Motors Corporation (AMC).</p>
+          <a href="https://www.jeep-india.com/" class="card-button">About JEEP</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/9611952/pexels-photo-9611952.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="THAR">
+        <div class="card-content">
+          <h2 class="card-title">THAR</h2>
+          <p class="card-description">The Mahindra Thar is a compact, four-wheel drive, off-road two-door SUV manufactured by Indian automaker Mahindra and Mahindra Ltd. It was introduced in October 4, 2010 and replaced the Mahindra Major. It is the latest iteration in Mahindra's line of licensed CJ-3B Willys Jeep based off-roading oriented vehicles.</p>
+          <a href="https://auto.mahindra.com/suv/thar/THRN.html" class="card-button">About THAR</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/3802508/pexels-photo-3802508.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lamborghini">
+        <div class="card-content">
+          <h2 class="card-title">Lamborghini</h2>
+          <p class="card-description">Lamborghini usually referred to as Lamborghini or colloquially Lambo, is an Italian manufacturer of luxury sports cars and SUVs based in Sant'Agata Bolognese. The company is owned by the Volkswagen Group through its subsidiary Audi.</p>
+          <a href="https://www.lamborghini.com/en-en" class="card-button">About Lamborghini</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/3764984/pexels-photo-3764984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Rolls-Royce">
+        <div class="card-content">
+          <h2 class="card-title">Rolls-Royce</h2>
+          <p class="card-description">Rolls-Royce Motor Cars Limited is a British luxury automobile maker that has operated as a wholly owned subsidiary of BMW AG since 2003 – as the exclusive manufacturer of Rolls-Royce-branded motor cars. The company's administrative and production headquarters are located on the 42-acre (17 ha) Goodwood Estate in Goodwood, West Sussex, England, United Kingdom.</p>
+          <a href="https://www.rolls-roycemotorcars.com/en_GB/home.html" class="card-button">About Rolls-Royce</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/16626596/pexels-photo-16626596/free-photo-of-jaguar-f-type-car-parked.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Jaguar">
+        <div class="card-content">
+          <h2 class="card-title">Jaguar</h2>
+          <p class="card-description">Jaguar Cars was the company that was responsible for the production of Jaguar cars until its operations were fully merged with those of Land Rover to form Jaguar Land Rover on 1 January 2013.</p>
+          <a href="https://www.jaguar.in/copy-nothing/jaguar-type-00.html?utm_source=gs&utm_medium=sem&utm_campaign=in_nv_jg_jg_all_ajg_my24_en_gmc1077_thk_cpdxue_gs_ds_2411_dsa_ext_geo_nu_xpl_nu_sem_04989442_dg_nu_B-P-Jaguar-Pure-Brand-CAMPP2&utm_content=New-Jaguar-Pure-Brand-Always-On-Exact-P2&gad_source=1&gclid=CjwKCAiA9bq6BhAKEiwAH6bqoGxjmxRS_qofutrc6kHi4RaXom7t5MuVr55CQZjgwdMoa0FEh5q4LxoC-X4QAvD_BwE&gclsrc=aw.ds" class="card-button">About Jaguar</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://images.pexels.com/photos/28984237/pexels-photo-28984237/free-photo-of-luxury-sports-car-and-private-jet-on-runway.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Mc-Laren">
+        <div class="card-content">
+          <h2 class="card-title">Mclaren</h2>
+          <p class="card-description">McLaren Racing Limited (/məˈklærən/ mə-KLARR-ən) is a British motor racing team based at the McLaren Technology Centre in Woking, Surrey, England. The team is a subsidiary of the McLaren Group, which owns a majority of the team. McLaren is best known as a Formula One chassis constructor, the second-oldest active team and the second-most successful Formula One team after Ferrari, having won 188 races, 12 Drivers' Championships, and eight Constructors' Championships.</p>
+          <a href="https://cars.mclaren.com/en/world-of-mclaren/wallpapers" class="card-button">About Mclaren</a>
+        </div>
+      </div>
+  </div>
+</body>

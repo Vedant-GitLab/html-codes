@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Calculator</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .calculator {
+    background-color: silver;
+    padding: 20px;
+    let currentInput = '';
+    let previousInput = '';
+    let operation = undefined;
+    
+    function updateDisplay() {
+      document.getElementById('display').value = currentInput;
+    }
+    
+    function appendNumber(number) {
+      if (currentInput.length < 16) {
+        currentInput += number;
+        updateDisplay();
+      }
+    }
+    
+    function clearDisplay() {
+      currentInput = '';
+      previousInput = '';
+      operation = undefined;
+      updateDisplay();
+    }
+    
+    function chooseOperation(op) {
+      if (currentInput === '') return;
+      if (previousInput !== '') {
+        calculateResult();
+      }
+      operation = op;
+      previousInput = currentInput;
+      currentInput = '';
+    }
+    
+    function calculateResult() {
+      let result;
+      const prev = parseFloat(previousInput);
+      const current = parseFloat(currentInput);
+      if (isNaN(prev) || isNaN(current)) return;
+    
+      switch (operation) {
+        case '+':
+          result = prev + current;
+          break;
+        case '-':
+          result = prev - current;
+          break;
+        case '*':
+          result = prev * current;
+          break;
+        case '/':
+          result = prev / current;
+          break;
+        default:
+          return;
+      }
+    
+      currentInput = result.toString();
+      operation = undefined;
+      previousInput = '';
+      updateDisplay();
+    }
+    
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(250, 250, 250, 0.1);
+    border: 5px solid black;
+  }
+  
+  #display {
+    width: 100%;
+    height: 50px;
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #0c0b0b;
+    border-radius: 5px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+  
+  button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    border-radius: 5px ;
+    background-color: #fcf7f7;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  button:hover {
+    background-color: #6e4747;
+  }
+  
+  button:active {
+    background-color: #cf8f8f;
+  }
+  
+  </style>
+</head>
+<body>
+  <center style="font-size: 50px; color: blue;" ><h1>CALCULATOR</h1><br><br>
+  <div class="calculator">
+  <input type="text" id="display" disabled />
+    <div class="buttons">
+      <button class="btn" onclick="appendNumber(7)">7</button>
+      <button class="btn" onclick="appendNumber(8)">8</button>
+      <button class="btn" onclick="appendNumber(9)">9</button>
+      <button class="btn" onclick="chooseOperation('+')">+</button>
+      
+      <button class="btn" onclick="appendNumber(4)">4</button>
+      <button class="btn" onclick="appendNumber(5)">5</button>
+      <button class="btn" onclick="appendNumber(6)">6</button>
+      <button class="btn" onclick="chooseOperation('-')">-</button>
+      
+      <button class="btn" onclick="appendNumber(1)">1</button>
+      <button class="btn" onclick="appendNumber(2)">2</button>
+      <button class="btn" onclick="appendNumber(3)">3</button>
+      <button class="btn" onclick="chooseOperation('*')">*</button>
+      
+      <button class="btn" onclick="appendNumber(0)">0</button>
+      <button class="btn" onclick="clearDisplay()">C</button>
+      <button class="btn" onclick="calculateResult()">=</button>
+      <button class="btn" onclick="chooseOperation('/')">/</button>
+    </div>
+  </div>
+
+  <script>let currentInput = '';
+    let previousInput = '';
+    let operation = undefined;
+    
+    function updateDisplay() {
+      document.getElementById('display').value = currentInput;
+    }
+    
+    function appendNumber(number) {
+      if (currentInput.length < 16) {
+        currentInput += number;
+        updateDisplay();
+      }
+    }
+    
+    function clearDisplay() {
+      currentInput = '';
+      previousInput = '';
+      operation = undefined;
+      updateDisplay();
+    }
+    
+    function chooseOperation(op) {
+      if (currentInput === '') return;
+      if (previousInput !== '') {
+        calculateResult();
+      }
+      operation = op;
+      previousInput = currentInput;
+      currentInput = '';
+    }
+    
+    function calculateResult() {
+      let result;
+      const prev = parseFloat(previousInput);
+      const current = parseFloat(currentInput);
+      if (isNaN(prev) || isNaN(current)) return;
+    
+      switch (operation) {
+        case '+':
+          result = prev + current;
+          break;
+        case '-':
+          result = prev - current;
+          break;
+        case '*':
+          result = prev * current;
+          break;
+        case '/':
+          result = prev / current;
+          break;
+        default:
+          return;
+      }
+    
+      currentInput = result.toString();
+      operation = undefined;
+      previousInput = '';
+      updateDisplay();
+    }
+    </script>
+</body>
+</html>

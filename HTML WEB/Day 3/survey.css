@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ 
+ html, body {
+    height: 100%;
+ }
+ 
+ body {
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+    color: white;
+    
+ }
+ 
+ .container {
+    padding: 40px;
+    height: 100%;
+    width: 100%;
+    /* background-color: aliceblue; */
+    background-image: url("https://www.google.com/imgres?q=wallpaper%20pics&imgurl=https%3A%2F%2Fimg.freepik.com%2Ffree-photo%2Fpainting-mountain-lake-with-mountain-background_188544-9126.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-photos-vectors%2Fdesktop-wallpaper&docid=e8dnkGWykAno7M&tbnid=ASMDFNsL7Vw1YM&vet=12ahUKEwjGuIijlP6JAxUOUGwGHeMJH_gQM3oECCoQAA..i&w=626&h=358&hcb=2&ved=2ahUKEwjGuIijlP6JAxUOUGwGHeMJH_gQM3oECCoQAA");
+    background-repeat: no-repeat;
+    background-position: center;
+    object-position: contain;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+form{
+    border:2px solid black;
+    padding:50px;
+    border-radius: 15px;
+    /* position: relative;  */
+    overflow: hidden;
+    border: 7px solid white;
+}
+.Heading{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 50px;
+}
+.Subheading{
+    font-family: sans-serif;
+}
+.name{
+    font-family: cursive;
+    font-size: 20px;
+}
+.email{
+    font-family: cursive;
+    font-size: 20px;
+}
+.age{
+    font-family: cursive;
+    font-size: 20px;
+}
+.choose{
+    font-size: 20px;
+    font-family: cursive;
+}
+.box{
+    border-radius: 20px;
+    padding: 10px;
+    width: 400px;
+    font-weight: bold;
+}
